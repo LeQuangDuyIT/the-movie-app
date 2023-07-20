@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.backBtn {
+    left: 0;
+}
+
+.nextBtn {
+    right: 0;
+}
+
+.caret {
+    color: $text-orangerYellow;
+    font-size: 60px;
+}
+
+.regular {
+    background: transparent;
+    border: 1px solid $text-orangerYellowBold;
+
+    .caret {
+        color: $text-orangerYellowBold;
+    }
+}
+
+.small {
+    width: 42px;
+    height: 42px;
+
+    opacity: 1;
+
+    .caret {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.header {
+    height: $header-height;
+    padding: 8px 0;
+
+    background-color: $bg-lightGray;
+}
+
+.menu {
+    display: flex;
+
+    height: 100%;
+    padding: 0 16px;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        height: 100%;
+        padding: 8px 16px;
+
+        font-size: 1.8em;
+        font-weight: bold;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+}
