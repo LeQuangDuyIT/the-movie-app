@@ -53,21 +53,23 @@ const HeroSlider = ({ data }) => {
                     <Link to={`/movie/${movie.id}`} className={styles.viewmoreBtn}>
                         View more
                     </Link>
+                    <div className={styles.moveSlide}>
+                        <MoveCaret back regular small handleClick={() => handleMoveSlide(-1)} />
+                        <MoveCaret next regular small handleClick={() => handleMoveSlide(1)} />
+                    </div>
+                    <div className={styles.dotRow}>
+                        {data.length > 0 &&
+                            data.map((movie, index) => (
+                                <span
+                                    key={movie.id}
+                                    className={clsx({
+                                        [styles.currentIndex]: index === slideIndex
+                                    })}
+                                    onClick={() => setSlideIndex(index)}
+                                ></span>
+                            ))}
+                    </div>
                 </div>
-            </div>
-            <div className={styles.moveSlide}>
-                <MoveCaret back regular small handleClick={() => handleMoveSlide(-1)} />
-                <MoveCaret next regular small handleClick={() => handleMoveSlide(1)} />
-            </div>
-            <div className={styles.dotRow}>
-                {data.length > 0 &&
-                    data.map((movie, index) => (
-                        <span
-                            key={movie.id}
-                            className={clsx({ [styles.currentIndex]: index === slideIndex })}
-                            onClick={() => setSlideIndex(index)}
-                        ></span>
-                    ))}
             </div>
         </div>
     );
