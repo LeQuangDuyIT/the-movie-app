@@ -11,6 +11,7 @@ const MovieCard = ({ id, title, poster_path, slideRef }) => {
         <Link to={`/movie/${id}`} className={styles.cardWrap} ref={slideRef}>
             <div className={styles.movieCard}>
                 <img src={imageURL} alt={title} />
+                <h4 className={styles.movieName}>{title}</h4>
             </div>
         </Link>
     );

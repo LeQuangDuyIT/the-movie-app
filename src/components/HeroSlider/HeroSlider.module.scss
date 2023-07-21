@@ -10,9 +10,11 @@
     height: 737px;
 }
 .heroCore {
-    width: 90%;
+    position: relative;
+
+    width: 100%;
     height: 90%;
-    padding: 5% 7.5%;
+    padding: 5.5% 7.5%;
     border-radius: $box-radius;
 
     background-color: rgba(0, 0, 0, 0.5);
@@ -31,12 +33,14 @@
     }
 }
 .movieCard {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
     width: 100%;
-    height: 100%;
+    height: 36%;
     padding: 1.5rem 2rem;
-    border-radius: $box-radius;
+    border-radius: 0 0 $box-radius $box-radius;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
     background-color: rgba(0, 0, 0, 0.6);
@@ -47,19 +51,19 @@
         color: $text-orangerYellow;
 
         font-family: 'Kanit', sans-serif;
-        font-size: 6.4em;
+        font-size: 5.6em;
         text-transform: uppercase;
         line-height: 1;
     }
     .introdue {
         margin-bottom: 32px;
 
-        font-size: 2.4em;
+        font-size: 1.8em;
     }
     .viewmoreBtn {
         position: absolute;
         bottom: 1.5rem;
-        left: 2rem;
+        right: 2rem;
 
         padding: 0.5rem 0.75rem;
         border-radius: 0.25rem;
@@ -82,17 +86,19 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-    width: calc(90% + 100px);
+    width: calc(100% + 100px);
 }
 .dotRow {
     display: flex;
-    align-items: end;
+    align-items: start;
     gap: 8px;
 
     position: absolute;
-    bottom: 10%;
+    top: 7.5%;
     left: 50%;
     transform: translateX(-50%);
+
+    opacity: 0.7;
 
     span {
         display: block;
